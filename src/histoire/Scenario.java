@@ -3,6 +3,7 @@ package histoire;
 import personnages.Gaulois;
 import personnages.Romain;
 import personnages.Druide;
+import personnages.Equipement;
 
 
 public class Scenario {
@@ -14,6 +15,7 @@ public class Scenario {
 		Romain minus = new Romain("Minus", 6);
 		Druide panoramix = new Druide("Panoramix", 5, 10);
 		
+		minus.sEquiper(Equipement.BOUCLIER);
 		panoramix.preparerPotion();
 		panoramix.booster(obelix);
 		panoramix.booster(asterix);
