@@ -4,6 +4,7 @@ import personnages.Gaulois;
 import personnages.Romain;
 import personnages.Druide;
 import personnages.Equipement;
+import personnages.Musee;
 
 
 public class Scenario {
@@ -14,6 +15,7 @@ public class Scenario {
 		Gaulois obelix = new Gaulois("Obélix", 10);
 		Romain minus = new Romain("Minus", 6);
 		Druide panoramix = new Druide("Panoramix", 5, 10);
+		Musee musee = new Musee();
 		
 		minus.sEquiper(Equipement.BOUCLIER);
 		panoramix.preparerPotion();
@@ -23,6 +25,8 @@ public class Scenario {
 		minus.parler("UN GAU... UN GAUGAU...");
 		asterix.frapper(minus);
 		asterix.frapper(minus);
+		
+		asterix.faireUneDonation(musee);
 		
 	}
 

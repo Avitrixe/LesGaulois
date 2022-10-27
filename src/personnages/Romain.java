@@ -48,13 +48,6 @@ public class Romain {
 		forceCoup = calculResistanceEquipement(forceCoup);
 		
 		force -= forceCoup;
-//		if(force > 0) {
-//			parler("Aie");
-//		}
-//		else {
-//			equipementEjecte = ejecterEquipement();
-//			parler("J'abandonne...");
-//		}
 		if(force > 0) {
 			parler("Aie");
 		}

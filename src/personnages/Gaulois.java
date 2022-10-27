@@ -47,13 +47,36 @@ public class Gaulois {
 		effetPotion = forcePotion;
 		parler("Merci Druide, je sens que ma force est "+ effetPotion +" fois dÃ©cuplÃ©e.");
 	}
+	
+	public void faireUneDonation(Musee musee) {
+		if(nbTrophees == 0)
+		{
+			parler("Je n'ai aucun équipement à donner au musée.");
+		}
+		else
+		{
+			parler("Je donne au musee tous mes trophees :");
+			while(nbTrophees > 0)
+			{
+				nbTrophees --;
+				System.out.println("- " + trophees[nbTrophees]);
+				musee.donnerTrophees(this, trophees[nbTrophees]);
+			}
+		}
+	}
 
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("AstÃ©rix", 8);
+		Gaulois asterix = new Gaulois("Astérix", 50);
 		Romain minus = new Romain("Minus", 2);
+		Musee musee = new Musee();
+		
+		minus.sEquiper(Equipement.BOUCLIER);
 		asterix.parler("Coucou, qui veut un pain ?");
 		asterix.frapper(minus);
-		asterix.boirePotion(3);
+		
+		asterix.faireUneDonation(musee);
+		
+		System.out.println(musee.extraireInstructionsCaml());
 		
 	}
 
